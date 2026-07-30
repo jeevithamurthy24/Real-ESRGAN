@@ -7,7 +7,7 @@ We provide two pretrained models:
 
 *Note that* the pretrained models are trained under the `MATLAB bicubic` kernel. 
 If the downsampled kernel is different from that, the results may have artifacts.
-# evaluation metrics 
+# Evaluation metrics 
 1. Peak Signal-to-Noise Ratio (PSNR)
 
 Measures the quality of the enhanced image compared to the original.
