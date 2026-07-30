@@ -2,8 +2,8 @@ import os
 import torch
 import RRDBNet_arch as arch
 
-pretrained_net = torch.load('./models/RRDB_ESRGAN_x4.pth')
-save_path = './models/RRDB_ESRGAN_x4.pth'
+pretrained_net = torch.load('./ESRGAN/models/RRDB_ESRGAN_x4.pth')
+save_path = './ESRGAN/models/RRDB_ESRGAN_x4.pth'
 
 crt_model = arch.RRDBNet(3, 3, 64, 23, gc=32)
 crt_net = crt_model.state_dict()
@@ -21,7 +21,6 @@ tbd = []
 for k, v in crt_net.items():
     tbd.append(k)
 
-# directly copy
 for k, v in crt_net.items():
     if k in pretrained_net and pretrained_net[k].size() == v.size():
         crt_net[k] = pretrained_net[k]
