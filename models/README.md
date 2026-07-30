@@ -8,3 +8,15 @@ We provide two pretrained models:
 *Note that* the pretrained models are trained under the `MATLAB bicubic` kernel. 
 If the downsampled kernel is different from that, the results may have artifacts.
 # evaluation metrics 
+1. Peak Signal-to-Noise Ratio (PSNR)
+
+Measures the quality of the enhanced image compared to the original.
+Higher PSNR indicates better image reconstruction with less distortion.
+Unit: dB (Decibels).
+
+2. Structural Similarity Index Measure (SSIM)
+
+Evaluates the similarity between the original and enhanced images.
+Considers brightness, contrast, and structure.
+Value ranges from 0 to 1.
+A value closer to 1 indicates better image quality.
